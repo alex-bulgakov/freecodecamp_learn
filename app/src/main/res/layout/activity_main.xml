@@ -4,25 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:padding="100dp">
+    android:padding="100dp"
+    tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/edtText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter some text"
         android:layout_centerInParent="true"
-        android:id="@+id/edtText"
-        />
+        android:hint="Enter some text"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold|italic" />
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Say hello"
-    android:layout_centerInParent="true"
-    android:layout_below="@id/edtText"
-    android:layout_marginTop="20dp"
-    android:id="@+id/btnHello"/>
+    <Button
+        android:id="@+id/btnHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtText"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Say hello" />
 
-    
+    <TextView
+        android:id="@+id/txtHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Hello"
+        android:textSize="20dp" />
+
+
 </RelativeLayout>
