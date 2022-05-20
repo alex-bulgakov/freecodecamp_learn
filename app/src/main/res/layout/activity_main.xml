@@ -6,9 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<CheckBox
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/moviesRelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
 
-    
+        <CheckBox
+            android:id="@+id/checkboxHarry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Harry Potter" />
+
+        <CheckBox
+            android:id="@+id/checkboxMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/checkboxHarry"
+            android:checked="true"
+            android:text="Matrix" />
+
+        <CheckBox
+            android:id="@+id/checkboxJocker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/checkboxMatrix"
+            android:checked="false"
+            android:text="Jocker" />
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
