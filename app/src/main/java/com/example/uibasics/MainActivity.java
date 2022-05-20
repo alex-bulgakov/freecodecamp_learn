@@ -11,15 +11,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button btnHello = findViewById(R.id.btnHello);
-        btnHello.setOnClickListener(this);
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnHello:
@@ -28,4 +19,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button btnHello = findViewById(R.id.btnHello);
+        btnHello.setOnClickListener(this);
+
+        btnHello.setOnLongClickListener(v -> {
+            Toast.makeText(MainActivity.this, "OnLongClickLiestener", Toast.LENGTH_LONG).show();
+            return true;
+        });
+    }
+
 }
