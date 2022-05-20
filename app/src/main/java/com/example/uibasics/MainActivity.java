@@ -10,12 +10,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
+    private TextView txtHello;
+    private EditText edtTxtName;
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnHello:
                 Toast.makeText(this, "Hello User!!!", Toast.LENGTH_SHORT).show();
+                txtHello.setText("Hello " + edtTxtName.getText().toString());
             default:
                 break;
         }
@@ -34,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         });
 
-        EditText edtTxtName = findViewById(R.id.edtText);
-        TextView txtHello = findViewById(R.id.txtHello);
+        edtTxtName = findViewById(R.id.edtText);
+        txtHello = findViewById(R.id.txtHello);
 
     }
 
