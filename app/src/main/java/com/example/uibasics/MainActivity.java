@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(MainActivity.this, "OnLongClickLiestener", Toast.LENGTH_LONG).show();
             return true;
         });
+
+        EditText edtTxtName = findViewById(R.id.edtText);
+        TextView txtHello = findViewById(R.id.txtHello);
+
     }
 
 }
