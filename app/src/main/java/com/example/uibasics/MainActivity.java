@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private CheckBox checkBoxHarry, checkBoxMatrix, checkBoxJocker;
     private RadioGroup rgMaritalStatus;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         checkBoxJocker = findViewById(R.id.checkboxJocker);
 
         rgMaritalStatus = findViewById(R.id.rgMaritalStatus);
+
+        progressBar = findViewById(R.id.progressbar);
 
         int checkedButton = rgMaritalStatus.getCheckedRadioButtonId();
 
@@ -51,9 +55,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.rbSingle:
                         Toast.makeText(MainActivity.this, "Single", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.VISIBLE);
                         break;
                     case R.id.rbInRel:
                         Toast.makeText(MainActivity.this, "In a Relationship", Toast.LENGTH_SHORT).show();
+                        progressBar.setVisibility(View.GONE);
                         break;
                     default:
                         break;
