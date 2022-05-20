@@ -46,7 +46,33 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/moviesRelLayout"
         android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/rgMaritalStatus">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbMarried"
+            android:text="Married"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbSingle"
+            android:text="Single"
+            android:layout_marginLeft="15dp"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbInRel"
+            android:text="In a relationship"
+            android:layout_marginLeft="15dp"
+            />
+
 
 
     </RadioGroup>

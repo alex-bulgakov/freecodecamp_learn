@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private CheckBox checkBoxHarry, checkBoxMatrix, checkBoxJocker;
+    private RadioGroup rgMaritalStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,25 @@ public class MainActivity extends AppCompatActivity {
         checkBoxHarry = findViewById(R.id.checkboxHarry);
         checkBoxMatrix = findViewById(R.id.checkboxMatrix);
         checkBoxJocker = findViewById(R.id.checkboxJocker);
+
+        rgMaritalStatus = findViewById(R.id.rgMaritalStatus);
+
+        rgMaritalStatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.rbMarried:
+                        Toast.makeText(MainActivity.this, "Married", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.rbSingle:
+                        Toast.makeText(MainActivity.this, "Single", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.rbInRel:
+                        Toast.makeText(MainActivity.this, "In a Relationship", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+            }
+        });
         
         if (checkBoxHarry.isChecked()) {
             Toast.makeText(this, "You watch Harry Potter", Toast.LENGTH_SHORT).show();
