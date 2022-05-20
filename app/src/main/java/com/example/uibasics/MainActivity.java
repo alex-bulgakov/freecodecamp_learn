@@ -26,6 +26,22 @@ public class MainActivity extends AppCompatActivity {
 
         rgMaritalStatus = findViewById(R.id.rgMaritalStatus);
 
+        int checkedButton = rgMaritalStatus.getCheckedRadioButtonId();
+
+        switch (checkedButton) {
+            case R.id.rbMarried:
+                Toast.makeText(MainActivity.this, "Married", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rbSingle:
+                Toast.makeText(MainActivity.this, "Single", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.rbInRel:
+                Toast.makeText(MainActivity.this, "In a Relationship", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+
         rgMaritalStatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -38,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.rbInRel:
                         Toast.makeText(MainActivity.this, "In a Relationship", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
                         break;
                 }
             }
