@@ -30,12 +30,12 @@ public class MainActivity extends AppCompatActivity {
         citiesList = findViewById(R.id.citiesList);
         studentsSpinner = findViewById(R.id.studentsSpinner);
 
-        ArrayList<String> students = new ArrayList<>();
-        students.add("Student John");
-        students.add("Student Alex");
-        students.add("Student Ivan");
-        students.add("Student Vovan");
-        students.add("Student Mixa");
+//        ArrayList<String> students = new ArrayList<>();
+//        students.add("Student John");
+//        students.add("Student Alex");
+//        students.add("Student Ivan");
+//        students.add("Student Vovan");
+//        students.add("Student Mixa");
 
         final ArrayList<String> cities = new ArrayList<>();
         cities.add("Moscow");
@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
         cities.add("London");
 
         ArrayAdapter<String> citiesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
-        ArrayAdapter<String> studentsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, students);
+//        ArrayAdapter<String> studentsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, students);
 
         citiesList.setAdapter(citiesAdapter);
-        studentsSpinner.setAdapter(studentsAdapter);
+//        studentsSpinner.setAdapter(studentsAdapter);
 
 
         studentsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

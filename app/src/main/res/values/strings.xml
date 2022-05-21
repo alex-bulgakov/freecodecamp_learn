@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Freecodecamp Android App</string>
+    <string-array name="students">
+        <item>Ivan</item>
+        <item>Alex</item>
+        <item>Masha</item>
+        <item>Vera</item>
+        <item>Vova</item>
+    </string-array>
 </resources>
