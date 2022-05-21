@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         cities.add("New York");
         cities.add("London");
 
-        ArrayAdapter<String> citiesAdapter = new ArrayQAdapter<>(this, android.R.layout.simple_list_item_1, cities);
+        ArrayAdapter<String> citiesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, cities);
+
+        citiesList.setAdapter(citiesAdapter);
     }
 
 }
