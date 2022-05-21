@@ -8,7 +8,9 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/myImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_alarm" />
 </RelativeLayout>
