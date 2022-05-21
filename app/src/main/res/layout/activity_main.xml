@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:hint="Enter some text"
+        android:hint="@string/hint"
         android:textColor="@color/purple_200"
         android:textStyle="bold|italic" />
 
@@ -23,7 +23,7 @@
         android:layout_below="@id/edtText"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:text="Say hello" />
+        android:text="@string/txtbtn" />
 
     <TextView
         android:id="@+id/txtHello"
@@ -32,7 +32,7 @@
         android:layout_below="@+id/btnHello"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Hello"
+        android:text="@string/hello"
         android:textSize="20dp" />
 
 

@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnHello:
-                Toast.makeText(this, "Hello User!!!", Toast.LENGTH_SHORT).show();
-                txtHello.setText("Hello " + edtTxtName.getText().toString());
+                Toast.makeText(this, getString(R.string.hello), Toast.LENGTH_SHORT).show();
+                txtHello.setText(getString(R.string.hello) + " " + edtTxtName.getText().toString());
             default:
                 break;
         }
