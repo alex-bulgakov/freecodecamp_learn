@@ -18,13 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView citiesList;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         citiesList = findViewById(R.id.citiesList);
-        ArrayList<String> cities = new ArrayList<>();
+        final ArrayList<String> cities = new ArrayList<>();
         cities.add("Moscow");
         cities.add("Kiev");
         cities.add("Minsk");
