@@ -10,4 +10,5 @@
     <color name="colorMain">#1E88E5</color>
     <color name="colorAccent">#FFB300</color>
     <color name="colorText">#101010</color>
+    <color name="colorBackground">#341E88E5</color>
 </resources>

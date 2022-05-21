@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="100dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
 
     <EditText
         android:id="@+id/edtText"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:hint="@string/hint"
-        android:textColor="@color/purple_200"
+        android:textColor="@color/colorText"
         android:textStyle="bold|italic" />
 
     <Button
@@ -23,7 +24,9 @@
         android:layout_below="@id/edtText"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:text="@string/txtbtn" />
+        android:text="@string/txtbtn"
+        android:backgroundTint="@color/colorMain"
+        android:textColor="@color/colorAccent"/>
 
     <TextView
         android:id="@+id/txtHello"
@@ -33,7 +36,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="@string/hello"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textColor="@color/colorText"/>
 
 
 </RelativeLayout>
