@@ -18,7 +18,8 @@
         android:backgroundTint="@color/orange"
         android:src="@drawable/ic_add"
         app:backgroundTint="#FFF"
-        app:rippleColor="#FFF" />
+        app:rippleColor="#FFF"
+        android:id="@+id/fab"/>
 
 
 </RelativeLayout>
