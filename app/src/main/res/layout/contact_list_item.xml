@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     app:cardCornerRadius="10dp"
-    app:cardElevation="10dp">
+    app:cardElevation="10dp"
+    android:layout_margin="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Contact Name"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="7dp"/>
 
         <TextView
             android:id="@+id/txtEmail"
@@ -27,7 +29,8 @@
             android:layout_below="@id/txtName"
             android:layout_marginTop="7dp"
             android:text="Contact Email"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:layout_marginStart="5dp"/>
 
         <ImageView
             android:id="@+id/image"
