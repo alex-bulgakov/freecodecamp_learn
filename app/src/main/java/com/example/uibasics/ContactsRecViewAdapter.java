@@ -1,5 +1,6 @@
 package com.example.uibasics;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -20,17 +21,19 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contact_list_item, parent, false);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.txtName.setText(contacts.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return contacts.size();
     }
 
     public void setContacts(ArrayList<Contact> contacts) {
