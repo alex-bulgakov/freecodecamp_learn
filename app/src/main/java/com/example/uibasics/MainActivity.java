@@ -3,6 +3,7 @@ package com.example.uibasics;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -39,9 +40,11 @@ public class MainActivity extends AppCompatActivity  {
                 .setAction("Retry", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(MainActivity.this, "Retry Clicked", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(MainActivity.this, "Retry Clicked", Toast.LENGTH_SHORT).show();
                     }
                 })
+                .setActionTextColor(Color.RED)
+                .setTextColor(Color.YELLOW)
                 .show();
     }
 
