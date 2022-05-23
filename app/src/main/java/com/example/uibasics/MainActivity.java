@@ -35,7 +35,14 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     private void showSnackBar() {
-        Snackbar.make(parent, "This is a snackbar", Snackbar.LENGTH_INDEFINITE).show();
+        Snackbar.make(parent, "This is a snackbar", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Retry", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this, "Retry Clicked", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .show();
     }
 
 }
